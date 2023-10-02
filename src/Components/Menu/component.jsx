@@ -3,7 +3,7 @@ export const Menu = ({ data }) => {
 
     return (
         <ul>
-            {data.map((item) => <MenuItem dishName={item.name} />)}
+            {data.map((item) => <MenuItem key={item.id} dishName={item.name} />)}
         </ul>
     )
 }
