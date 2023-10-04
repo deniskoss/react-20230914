@@ -1,9 +1,9 @@
 import { MenuItem } from "../MenuItem/component.jsx";
-export const Menu = ({ data }) => {
+export const Menu = ({ restaurantMenu }) => {
 
     return (
         <ul>
-            {data.map((item) => <MenuItem dishName={item.name} />)}
+            {restaurantMenu.map((item) => <MenuItem dishName={item.name} />)}
         </ul>
     )
 }

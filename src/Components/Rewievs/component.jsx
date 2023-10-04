@@ -1,8 +1,8 @@
 
-export const Rewievs = ({ data }) => {
+export const Rewievs = ({ rewievs }) => {
     return (
         <ul>
-            {data.map((item) => <li>{item.user}: {item.text}</li>)}
+            {rewievs.map((item) => <li>{item.user}: {item.text}</li>)}
         </ul>
     )
 }
