@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { restaurants } from '../../constants/mock.js';
-import { Navigation } from '../../Components/Navigation/component.jsx';
+import { RestaurantsTabs } from '../../Components/RestaurantsTabs/component.jsx';
 import { Restaurant } from '../../Components/Restaurant/component.jsx';
 import { Header } from '../../Components/Header/component.jsx';
 import { Footer } from '../../Components/Footer/component.jsx';
@@ -14,12 +14,12 @@ export const MainPage = () => {
         <div className={styles.root}>
             <Header />
             <div className={styles.middleWrapper}>
-                <Navigation
+                <RestaurantsTabs
                     restaurants={restaurants}
-                    onChange={setActiveRestaurantIndex}
+                    onTabClick={setActiveRestaurantIndex}
                     activeRestaurantIndex={activeRestaurantIndex}/>
                 <Restaurant
-                    restaurants={restaurants}
+                    restaurant={restaurants[activeRestaurantIndex]}
                     activeRestaurantIndex={activeRestaurantIndex}/>
             </div>
             <Footer />
