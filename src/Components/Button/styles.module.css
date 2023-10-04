@@ -1,7 +1,14 @@
 .root {
-    background-color: orange;
     padding: 5px 10px;
     cursor: pointer;
+}
+
+.light {
+    background-color: orange;
+}
+
+.dark {
+    background-color: darkseagreen;
 }
 
 .active {
