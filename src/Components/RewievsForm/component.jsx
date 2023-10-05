@@ -1,5 +1,5 @@
-import {useReducer, useState} from "react";
-import {Button} from "../Button/component.jsx";
+import { useReducer } from "react";
+import { Button } from "../Button/component.jsx";
 
 const DefaultValues = {
     name: '',
@@ -8,8 +8,6 @@ const DefaultValues = {
 }
 
 const reducer = (state, action) => {
-    console.log('state', state);
-    console.log('action', action);
     switch (action?.type) {
         case "setName":
             return { ...state, name: action.payload };
@@ -26,7 +24,6 @@ const reducer = (state, action) => {
 
 export const RewievsForm = () => {
     const [formValues, dispatch] = useReducer(reducer, DefaultValues);
-    console.log('formValues', formValues);
     return (
         <form>
             <div>Имя</div>
