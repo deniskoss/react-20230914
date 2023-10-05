@@ -1,8 +1,9 @@
 import styles from './styles.module.css';
+import classNames from "classnames";
 
-export const Header = () => {
+export const Header = ({className}) => {
     return (
-        <div className={styles.root}>
+        <div className={classNames(styles.root, className)}>
             <h1>Fast and tasty</h1>
         </div>
     )

@@ -1,8 +1,7 @@
 import {useState} from 'react';
 import {Button} from '../Button/component.jsx';
-import styles from './styles.module.css';
 
-export const MenuItem = ({dishName}) => {
+export const MenuItem = ({dishName, className}) => {
     const [count, setCount] = useState(0);
     const setMore = () => setCount(count + 1);
     const setLess = () => {
@@ -13,7 +12,7 @@ export const MenuItem = ({dishName}) => {
     const disabled = count === 0;
 
     return (
-        <li className={styles.root}>{dishName} -
+        <li className={className}>{dishName} -
             <Button onClick={setLess} text="-" small disabled={disabled}/>
             {count}
             <Button onClick={setMore} text="+" small />

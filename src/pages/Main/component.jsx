@@ -12,7 +12,7 @@ export const MainPage = () => {
 
     return (
         <div className={styles.root}>
-            <Header />
+            <Header className={styles.header}/>
             <div className={styles.middleWrapper}>
                 <RestaurantsTabs
                     restaurants={restaurants}
@@ -22,7 +22,7 @@ export const MainPage = () => {
                     restaurant={restaurants[activeRestaurantIndex]}
                     activeRestaurantIndex={activeRestaurantIndex}/>
             </div>
-            <Footer />
+            <Footer className={styles.footer}/>
         </div>
     );
 };
