@@ -1,0 +1,18 @@
+.root {
+    width: 100%;
+}
+
+.middleWrapper {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.header {
+    position: fixed;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+}

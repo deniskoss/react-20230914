@@ -1,0 +1,18 @@
+.root {
+    background-color: orange;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.active {
+    background-color: darkturquoise;
+}
+
+.disabled {
+    cursor: auto;
+    background-color: blanchedalmond;
+}
+
+.sm {
+    padding: 0 5px;
+}
