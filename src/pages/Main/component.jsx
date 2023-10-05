@@ -15,7 +15,7 @@ export const MainPage = () => {
     return (
         <ThemeContext.Provider value={theme}>
             <div className={styles.root}>
-                <Header theme={theme} toggleTheme={setTheme} />
+                <Header theme={theme} toggleTheme={setTheme} className={styles.header} />
                 <div className={styles.middleWrapper}>
                     <RestaurantsTabs
                         restaurants={restaurants}
@@ -25,7 +25,7 @@ export const MainPage = () => {
                         restaurant={restaurants[activeRestaurantIndex]}
                         activeRestaurantIndex={activeRestaurantIndex}/>
                 </div>
-                <Footer />
+                <Footer className={styles.footer} />
             </div>
         </ThemeContext.Provider>
     );

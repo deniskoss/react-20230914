@@ -7,3 +7,12 @@
     max-width: 800px;
     margin: 0 auto;
 }
+
+.header {
+    position: fixed;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+}
