@@ -11,7 +11,6 @@ import {ThemeContext} from "../../contexts/Theme.jsx";
 export const MainPage = () => {
     const [activeRestaurantIndex, setActiveRestaurantIndex] = useState(0);
     const [theme, setTheme] = useState('light');
-    console.log(theme);
 
     return (
         <ThemeContext.Provider value={theme}>

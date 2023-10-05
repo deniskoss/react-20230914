@@ -5,7 +5,6 @@ import {ThemeContext} from "../../contexts/Theme.jsx";
 
 export const Button = ({text, onClick, isActive, disabled, small}) => {
     const theme = useContext(ThemeContext);
-    console.log('button', theme);
     return <button
         onClick={onClick}
         className={classNames(styles.root, styles[theme], {
