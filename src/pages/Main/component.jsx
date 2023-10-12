@@ -9,10 +9,9 @@ import styles from './styles.module.css';
 
 export const MainPage = () => {
     const [activeRestaurantIndex, setActiveRestaurantIndex] = useState(0);
-
     return (
         <div className={styles.root}>
-            <Header className={styles.header}/>
+            <Header className={styles.header} />
             <div className={styles.middleWrapper}>
                 <RestaurantsTabs
                     restaurants={restaurants}
@@ -22,7 +21,7 @@ export const MainPage = () => {
                     restaurant={restaurants[activeRestaurantIndex]}
                     activeRestaurantIndex={activeRestaurantIndex}/>
             </div>
-            <Footer className={styles.footer}/>
+            <Footer className={styles.footer} />
         </div>
     );
 };
