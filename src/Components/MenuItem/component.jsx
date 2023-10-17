@@ -1,7 +1,11 @@
-import {useState} from 'react';
-import {Button} from '../Button/component.jsx';
+import { useState } from 'react';
+import { useSelector } from "react-redux";
+import { Button } from '../Button/component.jsx';
+import { selectDishById } from "../../store/dishes/selectors.js";
 
-export const MenuItem = ({dishName, className}) => {
+
+export const MenuItem = ({dishId, className}) => {
+    const dish = useSelector((state) => selectDishById(state, dishId));
     const [count, setCount] = useState(0);
     const setMore = () => setCount(count + 1);
     const setLess = () => {
@@ -12,10 +16,10 @@ export const MenuItem = ({dishName, className}) => {
     const disabled = count === 0;
 
     return (
-        <li className={className}>{dishName} -
-            <Button onClick={setLess} text="-" small disabled={disabled}/>
+        <li className={className}>{dish.name} -
+            <Button onClick={setLess} small disabled={disabled}>-</Button>
             {count}
-            <Button onClick={setMore} text="+" small />
+            <Button onClick={setMore} small>+</Button>
         </li>
     );
 };
