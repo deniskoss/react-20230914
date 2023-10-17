@@ -22,7 +22,7 @@ const reducer = (state, action) => {
     }
 }
 
-export const RewievsForm = () => {
+export const ReviewsForm = ({onSubmit}) => {
     const [formValues, dispatch] = useReducer(reducer, DefaultValues);
     return (
         <form>
@@ -59,14 +59,12 @@ export const RewievsForm = () => {
                     }}
                 />
             </div>
-            <Button
-                text="Сохранить"
-                onClick={() => {
+            <Button onClick={() => {
                     dispatch({
                         type: 'reset'
-                    })
-                }}
-            />
+                    });
+                }}>Reset</Button>
+            <Button onClick={onSubmit}>Submit</Button>
         </form>
     )
 };

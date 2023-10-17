@@ -1,11 +1,21 @@
 import { Menu } from "../Menu/component.jsx";
-import { Rewievs } from "../Rewievs/component.jsx";
+import { Reviews } from "../Reviews/component.jsx";
+import { AddReviewButton } from "../AddReviewButton/component.jsx";
+import { useSelector } from "react-redux";
+import { selectRestaurantById } from "../../store/restaurants/selectors.js";
 
-export const Restaurant = ({ restaurant }) => {
+export const Restaurant = ({ restaurantId }) => {
+    const restaurant = useSelector((state) => selectRestaurantById(state, restaurantId));
+
+    if (!restaurant) {
+        return null;
+    }
+
     return (
         <div>
             <h1>{restaurant.name}</h1>
-            <Menu restaurantMenu={restaurant.menu} />
-            <Rewievs rewievs={restaurant.reviews} />
+            <Menu menuIds={restaurant.menu} />
+            <Reviews reviewsIds={restaurant.reviews} />
+            <AddReviewButton />
         </div>
     )};

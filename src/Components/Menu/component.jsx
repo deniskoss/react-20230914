@@ -1,10 +1,11 @@
 import { MenuItem } from "../MenuItem/component.jsx";
 import styles from './styles.module.css'
-export const Menu = ({ restaurantMenu }) => {
+export const Menu = ({ menuIds }) => {
 
     return (
         <ul>
-            {restaurantMenu.map((item) => <MenuItem className={styles.menuItem} dishName={item.name} />)}
+            {menuIds.map((dishId) => <MenuItem key={dishId} className={styles.menuItem} dishId={dishId}/>)}
         </ul>
     )
 }
+
